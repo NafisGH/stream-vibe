@@ -1,8 +1,8 @@
-import postcssPxToRem from "postcss-pxtorem";
+import postcssPxToRem from 'postcss-pxtorem'
 
-export default ({}) => {
-	const isProd = env === "production";
-	const plugins = [];
+export default ({ env }) => {
+	const isProd = env === 'production'
+	const plugins = []
 
 	if (isProd) {
 		plugins.push(
@@ -10,8 +10,9 @@ export default ({}) => {
 				propList: ['*'],
 				mediaQuery: true,
 			})
-		);
+		)
 	}
+
 	return {
 		plugins,
 	}
